@@ -73,7 +73,7 @@ public struct URLImage<Content, Placeholder> : View where Content : View, Placeh
 
     public var body: some View {
         DispatchQueue.main.async {
-            if self.previousURL != self.url {
+            if self.previousURL != nil && self.previousURL != self.url {
                 self.imageProxy = nil
             }
         }
